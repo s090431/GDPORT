@@ -1,0 +1,20 @@
+<body id="werk">
+<% include header %>
+<% include border %>
+<% include borderborder %>
+<% include navigatie %>
+
+<section class="instagram">
+  <% afbeeldingen.forEach(function(afbeelding){ %>
+    <figure>
+      <a href="https://www.instagram.com/p/<%- afbeelding.id %>/?taken-by=joaquim.jacquemyn"><img class"insta" src="<%- afbeelding.media %>"></a>
+      <figcaption>
+          <% if (afbeelding.text) { %>
+            <%- afbeelding.text %>
+            <%} else {%>Check my Instagram for other cool stuff!<%} %>
+      </figcaption>
+    </figure>
+  <% }); %>
+</section>
+
+<% include footer %>
